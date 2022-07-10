@@ -1,0 +1,46 @@
+#c-main-navbar-checkbox {
+  display: none;
+}
+
+.c-main-navbar-ul {
+  display: none;
+}
+
+#c-main-navbar-close-icon {
+  height: 0;
+  opacity: 0;
+}
+
+#c-main-navbar-checkbox:checked ~ #c-main-navbar-ul {
+  display: block;
+  visibility: visible;
+  opacity: 100;
+  transform-origin: revert;
+  --tw-scale-x: .97;
+  --tw-scale-y: .97;
+}
+
+#c-main-navbar-checkbox + label[for=c-main-navbar-checkbox] #c-main-navbar-icons svg#c-main-navbar-hb-icon {
+  transition: transform .5s, opacity .2s ease-in-out, height 0ms ease-in-out;
+}
+
+#c-main-navbar-checkbox + label[for=c-main-navbar-checkbox] #c-main-navbar-icons svg#c-main-navbar-close-icon{
+  transition: transform .5s, opacity .2s ease-in-out, height 0ms ease-in-out;
+}
+
+#c-main-navbar-checkbox:checked + label[for=c-main-navbar-checkbox] #c-main-navbar-icons svg#c-main-navbar-hb-icon {
+  transform: rotate(-90deg);
+  opacity: 0;
+  height: 0;
+}
+
+#c-main-navbar-checkbox:checked + label[for=c-main-navbar-checkbox] #c-main-navbar-icons svg#c-main-navbar-close-icon {
+  transform: rotate(90deg);
+  opacity: 100;
+  height: 32px;
+}
+
+
+
+
+

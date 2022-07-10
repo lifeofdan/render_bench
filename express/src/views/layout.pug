@@ -1,0 +1,13 @@
+doctype html
+include mixins/_mainNav
+html(lang="en")
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(charset="UTF-8")
+    title Courseable
+    link(href='/styles/style.css', rel='stylesheet')
+    link(href='/styles/main.css', rel='stylesheet')
+  body(class="bg-neutral-content flex flex-col min-h-screen" style="overflow-y: scroll")
+    +mainNav
+    div(class="h-full mt-8")
+      block content

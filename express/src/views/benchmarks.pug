@@ -1,0 +1,11 @@
+extends layout.pug 
+
+block content
+  div(class="mx-8 mb-8")
+    article(class="prose lg:prose-xl mx-auto")
+      h1(class="text-center") Benchmarks 
+      p The page rendered in <span id="renderTime"></span>ms
+  script.
+    const currentTime = new Date();
+    const fullTime = currentTime - window.performance.timing.requestStart;
+      document.getElementById('renderTime').innerHTML = fullTime;

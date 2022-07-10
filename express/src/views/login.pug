@@ -1,0 +1,21 @@
+extends layout.pug 
+
+block content 
+  div(class="container mx-auto")
+    div(class="card mx-auto lg:w-128 bg-base-100 shadow-xl")
+      form(action="/login_submission" method="POST")
+        div(class="card-body")
+          h2(class="card-title") Login
+          div(class="form-control w-full")
+            label(class="label")
+              span(class="label-text") Email
+            input(type="email" name="email" placeholder="Type here" class="input input-bordered w-full")
+            label(class="label mt-4")
+              span(class="label-text") Password
+            input(type="password" name="password" placeholder="Type here" class="input input-bordered w-full")
+          div(class="card-actions mt-4 justify-between")
+            span(class="text-sm align-bottom mt-7") Don't have an account? 
+              a(href="/register") Click here to Register.
+            input(type="submit" class="btn btn-primary" value="Submit")
+    
+
