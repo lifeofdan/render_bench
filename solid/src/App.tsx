@@ -5,7 +5,7 @@ import styles from './App.module.css';
 
 const App: Component = () => {
   const currentTime = new Date();
-  const fullTime = currentTime - window.performance.timing.requestStart;
+  const fullTime = currentTime.getTime() - window.performance.timing.requestStart;
   return (
     <div class={styles.App}>
       <header class={styles.header}>

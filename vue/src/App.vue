@@ -1,6 +1,6 @@
 <script setup lang="ts">
   const currentTime = new Date();
-  const fullTime = currentTime - window.performance.timing.requestStart;
+  const fullTime = currentTime.getTime() - window.performance.timing.requestStart;
 </script>
 
 <template>

@@ -8,5 +8,5 @@ app.innerHTML = `
   <p>The page rendered in <span id="renderTime"></span>ms</p>
 `
 const currentTime = new Date();
-const fullTime = currentTime - window.performance.timing.requestStart;
+const fullTime = currentTime.getTime() - window.performance.timing.requestStart;
 document.getElementById('renderTime').innerHTML = fullTime;
